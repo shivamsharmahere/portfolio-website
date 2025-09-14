@@ -168,7 +168,7 @@ const AIProjectsSection = () => {
                       <span>Code</span>
                     </motion.a>
                     
-                    <motion.a
+                    {/* <motion.a
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -178,7 +178,7 @@ const AIProjectsSection = () => {
                     >
                       <ExternalLink className="w-4 h-4" />
                       <span>Demo</span>
-                    </motion.a>
+                    </motion.a> */}
                   </div>
                 </div>
 

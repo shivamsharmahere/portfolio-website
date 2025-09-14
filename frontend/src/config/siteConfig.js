@@ -297,7 +297,7 @@ export const experienceData = [
       "Implemented RAG architecture serving 1000+ daily queries with sub-second response times",
       "Designed scalable NLP pipelines reducing response latency by 40%"
     ],
-    technologies: ["LLAMA 3.3", "BioBERT NER", "Pinecone", "Flask", "AWS Lambda", "MySQL", "NLP", "RAG"],
+    technologies: ["LLAMA 3.3","GPT-OSS-120b", "BioBERT NER", "Pinecone", "Flask", "AWS Lambda", "MySQL", "NLP", "RAG"],
     highlights: [
       "99% uptime achievement",
       "1000+ daily queries handled",
@@ -356,8 +356,124 @@ export const experienceData = [
 
 // ============ PROJECTS SECTION ============
 export const projectsData = [
+{
+  id: 1,
+  title: "Advanced RAG Agent with Hybrid Search",
+  subtitle: "Production-worthy AI chatbot with intelligent document retrieval",
+  description: "Retrieval-Augmented Generation (RAG) based AI chatbot that answers user queries using PDF documents as knowledge sources with advanced hybrid search capabilities.",
+  longDescription: "A sophisticated RAG system featuring modular architecture with query expansion, hybrid retrieval combining dense and sparse methods, fusion using Reciprocal Rank Fusion (RRF), neural reranking with cross-encoders, and context compression. The multi-tool agent combines document Q&A, summarization, and web search capabilities through a clean Streamlit interface with citation tracking.",
+  technologies: ["Python", "LangChain", "Streamlit", "FAISS", "Groq", "Qwen Embeddings", "Tavily API", "RAG", "Vector DB", "Cross-encoders"],
+  features: [
+    "Advanced RAG pipeline with query expansion",
+    "Hybrid retrieval (dense + sparse)",
+    "Reciprocal Rank Fusion (RRF) for result fusion",
+    "Neural reranking with cross-encoders",
+    "Context compression and citation tracking",
+    "Multi-tool agent capabilities",
+    "Interactive Streamlit UI with citation view",
+    "Modular architecture for easy customization"
+  ],
+  metrics: ["Production-ready", "Modular Design", "Advanced Retrieval", "Citation Tracking"],
+  category: "NLP",
+  featured: true,
+  status: "Completed",
+  githubUrl: "https://github.com/shivamsharmahere/RAG-Agentic-HybridSearch",
+  demoUrl: null,
+  images: ["/images/projects/rag-agent1.jpg", "/images/projects/rag-agent2.jpg"],
+  tags: ["RAG", "AI", "LangChain", "Vector Search", "NLP"],
+  teamSize: "Solo Project",
+  duration: "1 week",
+  challenges: [
+    "Implementing hybrid search with optimal fusion",
+    "Neural reranking optimization",
+    "Modular architecture design",
+    "Context compression for large documents"
+  ],
+  learnings: [
+    "Advanced RAG architecture patterns",
+    "Hybrid search implementation",
+    "Cross-encoder reranking techniques",
+    "Production-ready AI system design"
+  ]
+},
   {
-    id: 1,
+    id: 2,
+    title: "MoodLens: Emotion Detection using CNN and FER-2013",
+    subtitle: "Real-time emotion recognition system",
+    description: "Real-time emotion detection using CNNs trained on FER-2013 dataset with image augmentation and class imbalance handling.",
+    longDescription: "Computer vision solution for emotion recognition that addresses dataset challenges through advanced preprocessing and augmentation techniques. The system can detect 7 different emotions in real-time with optimized CNN architecture for edge deployment.",
+    technologies: ["CNN", "FER-2013", "Image Augmentation", "TensorFlow", "OpenCV", "Python", "Computer Vision"],
+    features: [
+      "Real-time webcam emotion detection",
+      "7-class emotion classification", 
+      "Data augmentation pipeline",
+      "Class imbalance handling",
+      "Model optimization for edge devices",
+      "Confidence scoring"
+    ],
+    metrics: ["68% accuracy", "Real-time processing", "Class balance optimization", "Edge deployment ready"],
+    category: "Computer Vision",
+    featured: true,
+    status: "Completed",
+    githubUrl: "https://github.com/shivamsharmahere/MoodLens-Emotion-Detection-using-CNN-and-FER-2013.git",
+    demoUrl: "https://moodlens-demo.com",
+    images: ["/images/projects/moodlens1.jpg"],
+    tags: ["CNN", "Emotion Detection", "Computer Vision", "Real-time"],
+    teamSize: "Solo Project", 
+    duration: "2 weeks",
+    challenges: [
+      "Dataset class imbalance",
+      "Real-time performance optimization",
+      "Model accuracy improvement"
+    ],
+    learnings: [
+      "CNN architecture design",
+      "Data augmentation techniques",
+      "Real-time computer vision"
+    ]
+  },
+{
+  id: 3,
+  title: "SecureVision: ML-Enhanced Home Security System",
+  subtitle: "Intelligent surveillance with face recognition",
+  description: "Advanced home security system using OpenCV and machine learning featuring face recognition authentication, real-time Excel logging, and unknown intruder detection with timestamp capture.",
+  longDescription: "Next-generation home security system that elevates traditional surveillance through machine learning integration. The system combines OpenCV computer vision with face recognition algorithms to provide authenticated access control, automated logging, and comprehensive security monitoring with real-time data management and unknown threat detection.",
+  technologies: ["Python", "OpenCV", "Machine Learning", "Face Recognition", "Excel Integration", "Real-time Processing", "Computer Vision", "Authentication"],
+  features: [
+    "Face recognition user authentication",
+    "Real-time Excel spreadsheet logging",
+    "Unknown face capture with timestamps",
+    "Date and time tracking system",
+    "Multi-user recognition database",
+    "Automated security alerts",
+    "Image archival system",
+    "Live monitoring dashboard"
+  ],
+  metrics: ["3 core security features", "Real-time processing", "100% Autonomous", "Automated logging"],
+  category: "Computer Vision",
+  featured: true,
+  status: "Completed",
+  githubUrl: "https://github.com/shivamsharmahere/Home-Security-Security-System-using-OpenCV",
+  demoUrl: null,
+  images: ["/images/projects/security-system1.jpg", "/images/projects/security-system2.jpg"],
+  tags: ["OpenCV", "Face Recognition", "Security", "Machine Learning"],
+  teamSize: "Solo Project",
+  duration: "1 months",
+  challenges: [
+    "Face recognition accuracy optimization",
+    "Real-time Excel integration",
+    "Unknown face detection reliability",
+    "System performance under varying lighting"
+  ],
+  learnings: [
+    "OpenCV face recognition implementation",
+    "Real-time data logging techniques",
+    "Security system architecture design",
+    "ML model integration for authentication"
+  ]
+},
+  {
+    id: 4,
     title: "DrVision: AI-Powered Therapeutic Behavioral Analysis Pipeline",
     subtitle: "Comprehensive AI therapy analysis system",
     description: "AWS-deployed pipeline analyzing therapy sessions through facial expressions, vocal sentiment, eye movements, and posture patterns with 95% completion rate.",
@@ -373,7 +489,7 @@ export const projectsData = [
     ],
     metrics: ["95% completion rate", "60% time reduction", "Automated reporting", "Multi-modal analysis"],
     category: "Computer Vision",
-    featured: true,
+    featured: false,
     status: "Completed",
     githubUrl: "https://github.com/shivamsharmahere/drvision",
     demoUrl: "https://drvision-demo.com",
@@ -392,107 +508,6 @@ export const projectsData = [
       "Advanced computer vision techniques",
       "AWS cloud architecture",
       "Real-time data processing"
-    ]
-  },
-  {
-    id: 2,
-    title: "PDF Q&A App with Langchain and Llama 3.1",
-    subtitle: "Intelligent document analysis system",
-    description: "Retrieval augmented generation Q&A system for document analysis using LangChain, Ollama, and ChromaDB with scalable Flask API.",
-    longDescription: "Advanced RAG system that enables intelligent document querying through natural language. Built with modern AI stack including vector databases and optimized for scalability. The system can process multiple PDF formats, extract semantic meaning, and provide contextual answers with source citations.",
-    technologies: ["LangChain", "Llama 3.1", "ChromaDB", "Flask", "Ollama", "RAG", "Vector DB", "NLP"],
-    features: [
-      "PDF text extraction and chunking",
-      "Semantic search with vector embeddings",
-      "Context-aware answer generation",
-      "Source citation and references",
-      "Multi-document support",
-      "RESTful API endpoints"
-    ],
-    metrics: ["Scalable API", "Intuitive UI", "Document Analysis", "Context-aware responses"],
-    category: "NLP",
-    featured: true,
-    status: "Completed",
-    githubUrl: "https://github.com/shivamsharmahere/pdf-qa-app",
-    demoUrl: "https://pdf-qa-demo.com",
-    images: ["/images/projects/pdf-qa1.jpg", "/images/projects/pdf-qa2.jpg"],
-    tags: ["RAG", "NLP", "LangChain", "AI"],
-    teamSize: "Solo Project",
-    duration: "2 months",
-    challenges: [
-      "Vector database optimization",
-      "Context window management",
-      "Response accuracy improvement"
-    ],
-    learnings: [
-      "RAG architecture design",
-      "Vector embeddings optimization",
-      "LLM prompt engineering"
-    ]
-  },
-  {
-    id: 3,
-    title: "MoodLens: Emotion Detection using CNN and FER-2013",
-    subtitle: "Real-time emotion recognition system",
-    description: "Real-time emotion detection using CNNs trained on FER-2013 dataset with image augmentation and class imbalance handling.",
-    longDescription: "Computer vision solution for emotion recognition that addresses dataset challenges through advanced preprocessing and augmentation techniques. The system can detect 7 different emotions in real-time with optimized CNN architecture for edge deployment.",
-    technologies: ["CNN", "FER-2013", "Image Augmentation", "TensorFlow", "OpenCV", "Python", "Computer Vision"],
-    features: [
-      "Real-time webcam emotion detection",
-      "7-class emotion classification", 
-      "Data augmentation pipeline",
-      "Class imbalance handling",
-      "Model optimization for edge devices",
-      "Confidence scoring"
-    ],
-    metrics: ["68% accuracy", "Real-time processing", "Class balance optimization", "Edge deployment ready"],
-    category: "Computer Vision",
-    featured: false,
-    status: "Completed",
-    githubUrl: "https://github.com/shivamsharmahere/moodlens",
-    demoUrl: "https://moodlens-demo.com",
-    images: ["/images/projects/moodlens1.jpg"],
-    tags: ["CNN", "Emotion Detection", "Computer Vision", "Real-time"],
-    teamSize: "Solo Project", 
-    duration: "1.5 months",
-    challenges: [
-      "Dataset class imbalance",
-      "Real-time performance optimization",
-      "Model accuracy improvement"
-    ],
-    learnings: [
-      "CNN architecture design",
-      "Data augmentation techniques",
-      "Real-time computer vision"
-    ]
-  },
-  {
-    id: 4,
-    title: "AI-Powered Content Generator",
-    subtitle: "Multi-modal content creation platform",
-    description: "Automated content generation system using GPT-4 and DALL-E for creating blog posts, social media content, and visual assets.",
-    longDescription: "Comprehensive content creation platform that leverages multiple AI models to generate high-quality text and visual content. Features automated workflows, content scheduling, and performance analytics.",
-    technologies: ["GPT-4", "DALL-E", "React", "Node.js", "MongoDB", "Express", "AI APIs"],
-    features: [
-      "Text content generation",
-      "Image generation and editing",
-      "Content scheduling",
-      "SEO optimization",
-      "Performance analytics",
-      "Multi-platform publishing"
-    ],
-    metrics: ["90% time savings", "500+ generated posts", "85% user satisfaction"],
-    category: "AI Applications",
-    featured: false,
-    status: "In Progress",
-    githubUrl: "https://github.com/shivamsharmahere/ai-content-generator",
-    tags: ["GPT-4", "Content Generation", "DALL-E", "Full-stack"],
-    teamSize: "Solo Project",
-    duration: "2 months",
-    challenges: [
-      "API rate limiting optimization",
-      "Content quality consistency",
-      "Multi-platform integration"
     ]
   }
 ];

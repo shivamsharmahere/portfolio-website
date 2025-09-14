@@ -75,7 +75,7 @@ const ProjectsSection = () => {
                 <Github className="w-5 h-5" />
                 <span>View Code</span>
               </a>
-              <a
+              {/* <a
                 href={project.demoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -83,7 +83,7 @@ const ProjectsSection = () => {
               >
                 <ExternalLink className="w-5 h-5" />
                 <span>Live Demo</span>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -196,7 +196,7 @@ const ProjectsSection = () => {
                     <Github className="w-4 h-4" />
                     <span>Code</span>
                   </a>
-                  <a
+                  {/* <a
                     href={project.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -205,7 +205,7 @@ const ProjectsSection = () => {
                   >
                     <ExternalLink className="w-4 h-4" />
                     <span>Demo</span>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
