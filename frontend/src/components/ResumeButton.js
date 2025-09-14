@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 
 const ResumeButton = ({ variant = 'primary', className = '' }) => {
   const handleResumeDownload = () => {
-    // For now, this will create a mock download
-    // In production, you'd replace this with actual resume file URL
+    // Use process.env.PUBLIC_URL to handle GitHub Pages deployment paths
     const link = document.createElement('a');
-    link.href = '/resume/Shivam_Sharma_Resume_AI_Engineer.pdf'; // This should be your actual resume file
+    link.href = `${process.env.PUBLIC_URL}/resume/Shivam_Sharma_Resume_AI_Engineer.pdf`;
     link.download = 'Shivam_Sharma_Resume_AI_Engineer.pdf';
+    link.target = '_blank'; // Open in new tab for better UX
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
