@@ -37,13 +37,17 @@ jobs:
         cd frontend
         npm run build
         
-    - name: Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages (authenticated)
       if: github.ref == 'refs/heads/main'
       run: |
         cd frontend
         git config --global user.name 'GitHub Actions'
         git config --global user.email 'actions@github.com'
-        npm run deploy
+        # Build authenticated repo URL using the token so gh-pages can push
+        REPO="https://$GH_TOKEN@github.com/${{ github.repository }}.git"
+        echo "Using repo: $REPO"
+        # Use npx to run gh-pages directly with auth and avoid interactive prompts
+        npx gh-pages -d build -u "github-actions-bot <actions@github.com>" -r "$REPO"
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
